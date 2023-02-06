@@ -2,7 +2,7 @@ function NavBar() {
     
     return (
         <div>
-            The Bookstore
+            <h1>Boltzmann's Books</h1>
         </div>
     )
 }
