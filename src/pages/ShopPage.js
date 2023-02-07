@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar";
 
-function ShopPage() {
+function ShopPage(props) {
 
     useEffect(() => {
         fetchBooks();
@@ -18,14 +17,12 @@ function ShopPage() {
 
     }
 
-    const [booksInCart, setBooksInCart] = useState(0);
     const addToCart = (e) => {
-        setBooksInCart(booksInCart + 1);
+        props.setBooksInCart(props.booksInCart + 1);
     }
 
     return (
         <div>
-            <NavBar booksInCart={booksInCart} />
             <div id="books">
                 <div id="book-grid">
                     {books.map(item => (

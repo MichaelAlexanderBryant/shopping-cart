@@ -1,11 +1,9 @@
 import boltzmann from '../assets/boltzmann.jpg';
-import NavBar from '../components/NavBar';
 
 function HomePage() {
 
     return (
         <div>
-            <NavBar booksInCart={undefined}/>
             <div id="homepage">
                 <img src={boltzmann} alt="boltzmann"/>
                 <div id="homepage-intro">
