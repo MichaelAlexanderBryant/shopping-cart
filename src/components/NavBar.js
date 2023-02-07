@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar(props) {
     
     return (
         <div id="header-nav">
@@ -9,8 +9,9 @@ function NavBar() {
                 <ul id="nav-list">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/books">Books</Link></li>
-                    <li>Shopping Cart</li>
+                    <li id="shopping-cart">Shopping Cart <div id="number-cart">{props.booksInCart === undefined ? 0 : props.booksInCart}</div></li>
                 </ul>
+                
             </div>
         </div>
     )

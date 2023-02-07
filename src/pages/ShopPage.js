@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
 
 function ShopPage() {
 
@@ -17,22 +18,30 @@ function ShopPage() {
 
     }
 
+    const [booksInCart, setBooksInCart] = useState(0);
+    const addToCart = (e) => {
+        setBooksInCart(booksInCart + 1);
+    }
+
     return (
-        <div id="books">
-            <div id="book-grid">
-                {books.map(item => (
-                    <div className="book-card" key={item.title + item.cover_id}>                       
-                        <img className="book-cover" src={"https://covers.openlibrary.org/b/id/" + item.cover_id + "-M.jpg"} alt={item.title} key={item.cover_id}/>
-                        <div className="title-author-container">
-                            <h2 className="title" key={item.title}>{item.title}</h2>
-                            <h2 className="author" key={item.authors[0].name}>{"by " + item.authors[0].name}</h2>
+        <div>
+            <NavBar booksInCart={booksInCart} />
+            <div id="books">
+                <div id="book-grid">
+                    {books.map(item => (
+                        <div className="book-card" key={item.title + item.cover_id}>                       
+                            <img className="book-cover" src={"https://covers.openlibrary.org/b/id/" + item.cover_id + "-M.jpg"} alt={item.title} key={item.cover_id}/>
+                            <div className="title-author-container">
+                                <h2 className="title" key={item.title}>{item.title}</h2>
+                                <h2 className="author" key={item.authors[0].name}>{"by " + item.authors[0].name}</h2>
+                            </div>
+                            <div className="price" key={item.cover_id + " price"}>{"$" + Math.round(item.cover_id*0.001)/100}</div>
+                            <div className="button-container" key={item.title + " add-to-cart container"}>
+                                <button className="add-to-cart" key={item.title + " add-to-cart"} onClick={addToCart}>ADD TO CART</button>
+                            </div>
                         </div>
-                        <div className="price" key={item.cover_id + " price"}>{"$" + Math.round(Math.random()*10000)/100}</div>
-                        <div className="button-container" key={item.title + " add-to-cart container"}>
-                            <button className="add-to-cart" key={item.title + " add-to-cart"}>ADD TO CART</button>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -32,7 +32,6 @@ body {
     list-style: none;
 }
 
-
 a {
     text-decoration: none;
 }
@@ -52,6 +51,22 @@ h2 {
 
 li {
     font-size: 20px;
+}
+
+#shopping-cart{
+    display:flex;
+}
+
+#number-cart {
+    color:#3e5962;
+    background: white;
+    border-radius: 30px;
+    width: 25px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
 }
 
 #homepage {
@@ -114,4 +129,12 @@ p {
     background-color: #305c98;
     color: white;
     border: none;
+}
+
+.add-to-cart:hover {
+    background-color: #234069;
+}
+
+.add-to-cart:active {
+    border: 3px solid black;
 }
