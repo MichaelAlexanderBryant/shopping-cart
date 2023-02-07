@@ -30,6 +30,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    align-items: center;
 }
 
 a {
@@ -55,13 +56,15 @@ li {
 
 #shopping-cart{
     display:flex;
+    align-items: center;
 }
 
 #number-cart {
     color:#3e5962;
     background: white;
     border-radius: 30px;
-    width: 25px;
+    width: 40px;
+    height: 40px;
     text-align: center;
     display:flex;
     align-items: center;
