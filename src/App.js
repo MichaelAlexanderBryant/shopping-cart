@@ -6,11 +6,11 @@ import NavBar from './components/NavBar';
 import { useState } from 'react';
 
 function App() {
-  const [booksInCart, setBooksInCart] = useState(0);
+  const [booksInCart, setBooksInCart] = useState([]);
   return (
     <BrowserRouter>
       <div className="App">
-          <NavBar  booksInCart={booksInCart} setBooksInCart={setBooksInCart}/>
+          <NavBar  booksInCart={booksInCart.length} />
           <Routes>
             <Route path="/" exact element={<HomePage booksInCart={booksInCart} setBooksInCart={setBooksInCart} />} />
             <Route path="/books" element={<ShopPage booksInCart={booksInCart} setBooksInCart={setBooksInCart} />} />
