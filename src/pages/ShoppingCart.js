@@ -10,9 +10,16 @@ function ShoppingCart(props) {
     };
 
     return ( 
-        <div>
+        <div id="shopping-cart-container">
+            <button>Checkout</button>
             {Object.keys(counts).map((item) =>
-                <div key={item}>{item + ": " + counts[item]}</div>)}
+                <div className="book-cart">
+                    <img className="book-cover" src={"https://covers.openlibrary.org/b/id/" + item.split(" ").slice(-1) + "-M.jpg"} alt={item.title} key={item.cover_id + "666"}/>
+                    <div key={item}>{item}</div>
+                    <label htmlFor="quantity">Quantity In Cart</label>
+                    <input type={"number"} id={item.cover_id} className="quantity" min={"1"} defaultValue={counts[item]}></input>
+                </div>
+                )}
         </div>)
 
 }
