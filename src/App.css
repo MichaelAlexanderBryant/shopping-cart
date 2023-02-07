@@ -153,6 +153,10 @@ p {
     border: 3px solid black;
 }
 
+#checkout-button, #no-items {
+    margin: 20px;
+}
+
 #shopping-cart-container {
     display: flex;
     flex-direction: column;

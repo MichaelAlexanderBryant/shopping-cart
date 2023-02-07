@@ -11,7 +11,7 @@ function ShoppingCart(props) {
 
     return ( 
         <div id="shopping-cart-container">
-            <button>Checkout</button>
+            { props.booksInCart.length > 0 ? <button id="checkout-button">Checkout</button> : <div id="no-items">There's nothing in your cart!</div> }
             {Object.keys(counts).map((item) =>
                 <div className="book-cart">
                     <img className="book-cover" src={"https://covers.openlibrary.org/b/id/" + item.split(" ").slice(-1) + "-M.jpg"} alt={item.title} key={item.cover_id + "666"}/>
