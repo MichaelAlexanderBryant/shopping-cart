@@ -4,7 +4,7 @@ function NavBar() {
     
     return (
         <div id="header-nav">
-            <h1>Boltzmann's Books</h1>
+            <h1>Boltzmann's <span className="yellow-title">Books</span></h1>
             <div id="navigation">
                 <ul id="nav-list">
                     <li><Link to="/">Home</Link></li>

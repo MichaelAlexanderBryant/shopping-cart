@@ -17,6 +17,13 @@ body {
     grid-template-columns: 5fr 8fr;
     justify-content: left;
     align-items: center;
+    background-color: #3e5962;
+    color: white;
+    padding-left: 20px;
+}
+
+.yellow-title {
+    color: #c0a02e;
 }
 
 #nav-list {
@@ -25,16 +32,13 @@ body {
     list-style: none;
 }
 
-li {
-    color: black;
-}
 
 a {
     text-decoration: none;
 }
 
 a:visited {
-    color: black
+    color: white;
 }
 
 h1 {
@@ -42,11 +46,8 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 20px;
+    font-size: 12px;
+    font-weight:400;
 }
 
 #homepage {
@@ -59,38 +60,54 @@ h3 {
 
 p {
     font-size: 25px;
-    width: 300px;
+    width: 600px;
 }
 
 #book-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
     gap: 50px;
 }
 
 .book-card {
-    display:grid;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    justify-items: center;
     align-items: center;
-    border: 1px solid black;
-    padding: 20px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    width: 100%;
+}
+
+.book-cover {
+    flex: 10;
+    padding: 10px;
+}
+
+.title-author-container {
+    flex: 1;
+    width: 200px;
+    text-align: center;
 }
 
 .title {
 }
 
 .author {
-
 }
 
-.book-cover {
-
+.price {
+    flex: 1;
+    font-size: .75em;
+    padding: 20px;
 }
 
 .add-to-cart{
-    width: 500px;
+    flex: 1;
+    width: 250px;
     height: 50px;
+    background-color: #305c98;
+    color: white;
+    border: none;
 }
