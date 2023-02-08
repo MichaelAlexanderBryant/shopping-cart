@@ -136,7 +136,7 @@ p {
     text-align: center;
 }
 
-.add-to-cart{
+.add-to-cart, #checkout-button{
     flex: 1;
     width: 250px;
     height: 50px;
@@ -145,12 +145,16 @@ p {
     border: none;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover, #checkout-button:hover {
     background-color: #234069;
 }
 
 .add-to-cart:active {
     border: 3px solid black;
+}
+
+#button-cart-container {
+    text-align: center;
 }
 
 #checkout-button, #no-items {
