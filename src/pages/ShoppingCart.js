@@ -15,7 +15,7 @@ function ShoppingCart(props) {
             {Object.keys(counts).map((item) =>
                 <div className="book-cart">
                     <img className="book-cover cart-cover" src={"https://covers.openlibrary.org/b/id/" + item.split(" ").slice(-1) + "-M.jpg"} alt={item.title} key={item.cover_id + "666"}/>
-                    <div className="cart-title" key={item}>{item}</div>
+                    <div className="cart-title" key={item}>{item.split(" ").slice(0,-1).join(" ")}</div>
                     <div className="cart-quantity">
                         <div className="cart-quantity-container">
                             <label htmlFor="quantity">Quantity</label>
