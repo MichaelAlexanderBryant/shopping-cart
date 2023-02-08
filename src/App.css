@@ -164,3 +164,21 @@ p {
     justify-content: center;
     text-align: center;
 }
+
+.book-cart {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    border-bottom: 1px solid black;
+}
+
+.cart-title, .cart-quantity, .cart-quantity-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-quantity-input {
+    width: 50%;
+}

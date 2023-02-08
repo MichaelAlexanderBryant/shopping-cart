@@ -14,10 +14,14 @@ function ShoppingCart(props) {
             { props.booksInCart.length > 0 ? <button id="checkout-button">Checkout</button> : <div id="no-items">There's nothing in your cart!</div> }
             {Object.keys(counts).map((item) =>
                 <div className="book-cart">
-                    <img className="book-cover" src={"https://covers.openlibrary.org/b/id/" + item.split(" ").slice(-1) + "-M.jpg"} alt={item.title} key={item.cover_id + "666"}/>
-                    <div key={item}>{item}</div>
-                    <label htmlFor="quantity">Quantity In Cart</label>
-                    <input type={"number"} id={item.cover_id} className="quantity" min={"1"} defaultValue={counts[item]}></input>
+                    <img className="book-cover cart-cover" src={"https://covers.openlibrary.org/b/id/" + item.split(" ").slice(-1) + "-M.jpg"} alt={item.title} key={item.cover_id + "666"}/>
+                    <div className="cart-title" key={item}>{item}</div>
+                    <div className="cart-quantity">
+                        <div className="cart-quantity-container">
+                            <label htmlFor="quantity">Quantity</label>
+                            <input type={"number"} id={item.cover_id} className="quantity cart-quantity-input" min={"1"} defaultValue={counts[item]}></input>
+                        </div>
+                    </div>
                 </div>
                 )}
         </div>)
