@@ -122,12 +122,6 @@ p {
     text-align: center;
 }
 
-.title {
-}
-
-.author {
-}
-
 .price {
     flex: 1;
     font-size: .75em;
