@@ -40,7 +40,7 @@ function ShopPage(props) {
                                 <label htmlFor="quantity">Quantity</label>
                                 <input type={"number"} id={item.cover_id} className="quantity" min={"1"} defaultValue="1"></input>
                                 <div className="button-container" key={item.title + " add-to-cart container"}>
-                                    <button id={item.title + " by " + item.authors[0].name + " " + item.cover_id} className="add-to-cart" key={item.title + " add-to-cart"} onClick={addToCart}>ADD TO CART</button>
+                                    <button id={item.title + " by " + item.authors[0].name + " "  + Math.round(item.cover_id*0.001)/100 + " " + item.cover_id} className="add-to-cart" key={item.title + " add-to-cart"} onClick={addToCart}>ADD TO CART</button>
                                 </div>
                             </form>
                         </div>

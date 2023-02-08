@@ -7,10 +7,10 @@ function NavBar(props) {
             <h1>Boltzmann's <span className="yellow-title">Books</span></h1>
             <div id="navigation">
                 <ul id="nav-list">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/books">Books</Link></li>
+                    <li><Link to="/"><span className="underline">Home</span></Link></li>
+                    <li><Link to="/books"><span className="underline">Books</span></Link></li>
                     <li id="shopping-cart">
-                        <Link to="/cart">Shopping Cart </Link>
+                        <Link to="/cart"><span className="underline">Shopping Cart</span></Link>
                             <div id="number-cart">{props.booksInCart === undefined ? 0 : props.booksInCart}</div>
                     </li>
                 </ul>
