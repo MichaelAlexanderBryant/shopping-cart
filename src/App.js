@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import ShopPage from './pages/ShopPage';
@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
   const [booksInCart, setBooksInCart] = useState([]);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
           <NavBar  booksInCart={booksInCart.length} />
           <Routes>
@@ -18,7 +18,7 @@ function App() {
             <Route path="/cart" exact element={<ShoppingCart booksInCart={booksInCart} setBooksInCart={setBooksInCart} />} />
           </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
