@@ -54,12 +54,12 @@ function ShoppingCart(props) {
                     )}
                 </div>
                 <div id="side-bar">
-                    <div id="subtotal">{"Subtotal: $" + Math.round(subtotal*100)/100}</div>
+                    <div id="subtotal" data-testid="subtotal">{"Subtotal: $" + Math.round(subtotal*100)/100}</div>
                     <button id="checkout-button">Checkout</button>
                 </div>
             </div>
              )
-            : <div id="no-items">There's nothing in your cart!</div>}
+            : <div id="no-items" data-testid="no-items">There's nothing in your cart!</div>}
         </div>)
 
 
