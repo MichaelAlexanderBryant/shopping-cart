@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.7205eeca.css",
-    "main.js": "/shopping-cart/static/js/main.021c2e48.js",
+    "main.js": "/shopping-cart/static/js/main.4f35469c.js",
     "static/media/boltzmann.jpg": "/shopping-cart/static/media/boltzmann.bcd56db8f96cd8c7877c.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.7205eeca.css.map": "/shopping-cart/static/css/main.7205eeca.css.map",
-    "main.021c2e48.js.map": "/shopping-cart/static/js/main.021c2e48.js.map"
+    "main.4f35469c.js.map": "/shopping-cart/static/js/main.4f35469c.js.map"
   },
   "entrypoints": [
     "static/css/main.7205eeca.css",
-    "static/js/main.021c2e48.js"
+    "static/js/main.4f35469c.js"
   ]
 }
