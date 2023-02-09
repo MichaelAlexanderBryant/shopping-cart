@@ -9,7 +9,7 @@ function ShopPage(props) {
     const [books, setBooks] = useState([]);
 
     const fetchBooks = async () => {
-        const data = await fetch('http://openlibrary.org/subjects/statistical_mechanics.json?published_in=1980-1990');
+        const data = await fetch('https://openlibrary.org/subjects/statistical_mechanics.json?published_in=1980-1990');
 
         const jsonData = await data.json();
         setBooks(jsonData["works"]);
